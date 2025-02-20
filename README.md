@@ -39,3 +39,21 @@ combine multiple gols like war:war----and create lifecycle
 1.default = 8 phases
 2. clean
 3. site
+
+java version switch
+------------------
+```bash
+update-alternatives --config java
+```
+
+```bash
+There are 3 choices for the alternative java (providing /usr/bin/java).
+
+  Selection    Path                                            Priority   Status
+------------------------------------------------------------
+*  1           /usr/lib/jvm/java-11-openjdk-amd64/bin/java       1111      auto mode
+   2           /usr/lib/jvm/java-17-openjdk-amd64/bin/java       1112      manual mode
+   3           /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java      1110      manual mode
+
+Press <enter> to keep the current choice[*], or type selection number: 2
+```
