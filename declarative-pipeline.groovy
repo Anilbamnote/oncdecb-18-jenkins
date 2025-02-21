@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('git_checkout') {
             steps {
-                git branch: 'develop', url: 'https://github.com/cloud-blitz/angular-java.git'
+                git branch: 'main', url: 'https://github.com/Anilbamnote/student-ui-app.git'
             }
         }
         stage('build') {
@@ -23,3 +23,33 @@ pipeline {
         }
     }
 }
+
+
+
+
+
+// pipeline {
+//     agent {label 'slave'}
+//     stages {
+//         stage('git_ckeckout') {
+//             steps {
+//                 echo "pull success"
+//             }
+//         }
+//         stage('bild') {
+//             steps {
+//                 echo "bild success"
+//             }
+//         }
+//         stage('test') {
+//             steps {
+//                 echo "test success"
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo "Deploy success"
+//             }
+//         }
+//     }
+// }
