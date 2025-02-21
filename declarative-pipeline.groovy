@@ -1,5 +1,5 @@
 pipeline {
-    agent any //{label 'slave'}
+    agent  {label 'node1'}
     stages {
         stage('git_checkout') {
             steps {
@@ -8,7 +8,7 @@ pipeline {
         }
         stage('build') {
             steps {
-                sh 'mvn clean package'
+                sh '/opt/maven/bin/mvn clean package'
             }
         }
         stage('test') {
