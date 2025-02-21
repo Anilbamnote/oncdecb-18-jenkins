@@ -57,3 +57,36 @@ There are 3 choices for the alternative java (providing /usr/bin/java).
 
 Press <enter> to keep the current choice[*], or type selection number: 2
 ```
+
+
+install older version of jenkins
+--------------------------------------
+
+```bash
+sudo apt-cache search openjdk
+
+sudo apt-get install openjdk-11-jdk
+```
+
+install reposetory first
+ ------------------------------
+
+```bash
+
+sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+sudo apt-get update
+```
+
+then refer this and install older versions
+
+```bash
+https://directdevops.blog/2019/01/04/installing-specific-lts-version-of-jenkins-on-ubuntu/
+
+sudo apt-cache madison jenkins
+sudo apt-get install jenkins=2.426.1  -y
+
+```
