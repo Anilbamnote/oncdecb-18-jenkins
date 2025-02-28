@@ -30,7 +30,7 @@ pipeline {
         }
         stage('deploy') {
             steps {
-                echo "depoly success"
+                deploy adapters: [tomcat9(credentialsId: 'tomacat-cred', path: '', url: 'http://47.128.241.201:8080')], contextPath: '/', war: '**/*.war'
             }
         }
     }
