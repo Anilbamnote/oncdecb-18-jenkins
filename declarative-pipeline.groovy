@@ -20,6 +20,14 @@ pipeline {
 
             }
         }
+        stage('Quality_Gate') {
+            steps {
+             timeout(10) {
+                
+               }
+                 waitForQualityGate true
+            }
+        }
         stage('deploy') {
             steps {
                 echo "depoly success"
