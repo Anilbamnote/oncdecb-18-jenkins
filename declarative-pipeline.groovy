@@ -33,7 +33,7 @@ pipeline {
                sh 'aws s3 cp target/studentapp-2.2-SNAPSHOT.war  s3://my-terra-bucket00999'
            }
         }
-    }
+    
         // stage('deploy') {
         //     steps {
         //         deploy adapters: [tomcat9(credentialsId: 'tomacat-cred', path: '', url: 'http://47.128.241.201:8080')], contextPath: '/', war: '**/*.war'
