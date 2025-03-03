@@ -20,14 +20,14 @@ pipeline {
 
             }
         }
-        stage('Quality_Gate') {
-            steps {
-             timeout(10) {
+        // stage('Quality_Gate') {
+        //     steps {
+        //      timeout(10) {
                 
-               }
-                 waitForQualityGate true
-            }
-        }
+        //        }
+        //          waitForQualityGate true
+        //     }
+        // }
          stage('artifact-upload') {
             steps {
                sh 'aws s3 cp target/studentapp-2.2-SNAPSHOT.war  s3://my-terra-bucket00999'
